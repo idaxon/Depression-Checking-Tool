@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Depression Assessment Tool</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Depression Assessment Tool</h1>
+        <form id="assessment-form">
+            <p>Please answer the following questions:</p>
+            
+            <div class="question">
+                <label>1. Do you often feel sad or hopeless?</label><br>
+                <input type="radio" name="q1" value="5"> Always<br>
+                <input type="radio" name="q1" value="3"> Sometimes<br>
+                <input type="radio" name="q1" value="0"> Never<br>
+            </div>
+            
+            <div class="question">
+                <label>2. Do you have trouble sleeping?</label><br>
+                <input type="radio" name="q2" value="5"> Always<br>
+                <input type="radio" name="q2" value="3"> Sometimes<br>
+                <input type="radio" name="q2" value="0"> Never<br>
+            </div>
+
+            <div class="question">
+                <label>3. Do you feel fatigued or lack energy?</label><br>
+                <input type="radio" name="q3" value="5"> Always<br>
+                <input type="radio" name="q3" value="3"> Sometimes<br>
+                <input type="radio" name="q3" value="0"> Never<br>
+            </div>
+
+            <div class="question">
+                <label>4. Do you find it hard to focus or concentrate?</label><br>
+                <input type="radio" name="q4" value="5"> Always<br>
+                <input type="radio" name="q4" value="3"> Sometimes<br>
+                <input type="radio" name="q4" value="0"> Never<br>
+            </div>
+
+            <div class="question">
+                <label>5. Have you lost interest in activities you once enjoyed?</label><br>
+                <input type="radio" name="q5" value="5"> Always<br>
+                <input type="radio" name="q5" value="3"> Sometimes<br>
+                <input type="radio" name="q5" value="0"> Never<br>
+            </div>
+
+            <div class="buttons">
+                <button type="button" id="submit-btn">Submit</button>
+                <button type="button" id="reset-btn">Reset</button>
+                <button type="button" id="save-btn">Save as PDF</button>
+            </div>
+        </form>
+
+        <div id="result" class="hidden">
+            <h2>Your Result:</h2>
+            <p id="score-text"></p>
+            <canvas id="depression-chart" width="400" height="200"></canvas>
+            <p id="recommendation"></p>
+        </div>
+    </div>
+
+    <script src="chart.min.js"></script>
+    <script src="jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
